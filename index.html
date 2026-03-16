@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nbt.css">
+    <title>No Bots Test</title>
+</head>
+<body>
+
+    <form id="example-form">
+        <div id="nbt-element"></div>
+        <button type="submit" style="margin-top: 10px;">Submit</button>
+    </form>
+
+    <script src="nbt.js"></script>
+    <script>
+        NBT.init('#nbt-element');
+        
+        window.onNBTSuccess = function(token) {
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'nbt-response';
+            input.value = token;
+            document.getElementById('example-form').appendChild(input);
+        };
+    </script>
+</body>
+</html>
