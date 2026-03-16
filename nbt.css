@@ -1,0 +1,39 @@
+.nbt-container {
+    width: 300px;
+    height: 74px;
+    background-color: #f9f9f9;
+    border: 1px solid #d3d3d3;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nbt-checkbox {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #c1c1c1;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.3s;
+}
+
+.nbt-checkbox:hover { border-color: #4a90e2; }
+
+/* The Animated Spinner */
+.nbt-loader {
+    display: none;
+    width: 18px;
+    height: 18px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #4a90e2;
+    border-radius: 50%;
+    animation: nbt-spin 1s linear infinite;
+}
+
+@keyframes nbt-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
